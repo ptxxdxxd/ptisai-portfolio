@@ -13,13 +13,13 @@ export const projects: Project[] = [
   {
     id: 'neurotravel',
     title: 'NeuroTravel',
-    summary: 'Travel planning web app for neurodivergent travelers, built around sensory, cognitive and dietary needs.',
+    summary: 'Trip planning web app for neurodivergent travelers, built around sensory, accessibility and safety needs. Early prototype.',
     details: [
-      'Sign-up and login, trip planning and saved day-by-day itineraries',
-      'Supabase for auth and data, with an AI trip companion on Google Gemini',
+      'Six-step planner: lodging, transport, accessibility, day-by-day itinerary with sensory breaks, and an emergency plan',
+      'Supabase for sign-up, login and saved trips; light, dark and high-contrast themes',
       'Offline page and service worker so it works like an installable app',
     ],
-    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Supabase', 'Google Gemini'],
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Supabase'],
     githubUrl: 'https://github.com/ptxxdxxd/neurotravel-app',
   },
   {
