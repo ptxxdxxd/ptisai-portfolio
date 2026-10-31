@@ -3,12 +3,9 @@
 import { useState, useEffect } from 'react'
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
-import Resume from '@/components/Resume'
+import Projects from '@/components/Projects'
+import Experience from '@/components/Experience'
 import Certifications from '@/components/Certifications'
-import Services from '@/components/Services'
-import AITools from '@/components/AITools'
-import IndustryExpertise from '@/components/IndustryExpertise'
-import ROICalculator from '@/components/ROICalculator'
 import Contact from '@/components/Contact'
 
 export default function Home() {
@@ -47,30 +44,18 @@ export default function Home() {
           <Hero scrollToSection={scrollToSection} />
         </section>
         
-        <section id="resume">
-          <Resume />
+        <section id="projects">
+          <Projects />
         </section>
-        
-        <section id="certifications">
+
+        <section id="experience">
+          <Experience />
+        </section>
+
+        <section id="coursework">
           <Certifications />
         </section>
-        
-        <section id="services">
-          <Services scrollToSection={scrollToSection} />
-        </section>
 
-        <section>
-          <AITools />
-        </section>
-
-        <section>
-          <IndustryExpertise />
-        </section>
-
-        <section>
-          <ROICalculator scrollToSection={scrollToSection} />
-        </section>
-        
         <section id="contact">
           <Contact />
         </section>
