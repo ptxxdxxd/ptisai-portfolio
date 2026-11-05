@@ -1,94 +1,70 @@
-// Portfolio Projects - Add this new section
+// Only real, public work goes here. Every link must resolve.
 export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  problem: string;
-  solution: string;
-  results: string;
-  technologies: string[];
-  githubUrl?: string;
-  demoUrl?: string;
-  category: 'LLM' | 'ML' | 'NLP' | 'Computer Vision' | 'Data Science' | 'Automation';
-  impact: 'Cost Reduction' | 'Revenue Growth' | 'Efficiency Gain' | 'Innovation';
-  industry: string;
+  id: string
+  title: string
+  summary: string
+  details: string[]
+  technologies: string[]
+  githubUrl?: string
+  liveUrl?: string
 }
 
 export const projects: Project[] = [
   {
-    id: '1',
-    title: 'AI-Powered Customer Service Automation',
-    description: 'Built a sophisticated RAG-based chatbot system that reduced customer service response time by 75% and handled 90% of inquiries without human intervention.',
-    problem: 'Customer service team was overwhelmed with repetitive inquiries, leading to long wait times and customer dissatisfaction.',
-    solution: 'Developed a custom RAG system using GPT-4 and enterprise data, with intelligent escalation to human agents for complex issues.',
-    results: '• 75% reduction in response time\n• 90% automation rate\n• $200K annual cost savings\n• 95% customer satisfaction score',
-    technologies: ['GPT-4', 'LangChain', 'Pinecone', 'FastAPI', 'React', 'Docker'],
-    githubUrl: 'https://github.com/ptxxdxxd/ai-customer-service',
-    category: 'LLM',
-    impact: 'Cost Reduction',
-    industry: 'Customer Service'
+    id: 'neurotravel',
+    title: 'NeuroTravel',
+    summary: 'Trip planning web app for neurodivergent travelers, built around sensory, accessibility and safety needs. Early prototype.',
+    details: [
+      'Six-step planner: lodging, transport, accessibility, day-by-day itinerary with sensory breaks, and an emergency plan',
+      'Supabase for sign-up, login and saved trips; light, dark and high-contrast themes',
+      'Offline page and service worker so it works like an installable app',
+    ],
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Supabase'],
+    githubUrl: 'https://github.com/ptxxdxxd/neurotravel-app',
   },
   {
-    id: '2', 
-    title: 'Generative AI Content Platform',
-    description: 'Created an enterprise content generation platform that produces high-quality marketing materials, documentation, and training content at scale.',
-    problem: 'Marketing team spent 40+ hours weekly creating content, leading to inconsistent quality and delayed campaigns.',
-    solution: 'Built a multi-model AI platform with brand voice training, content templates, and automated approval workflows.',
-    results: '• 300% increase in content production\n• 85% reduction in creation time\n• 40% improvement in engagement rates\n• Consistent brand voice across all materials',
-    technologies: ['GPT-4', 'Fine-tuning', 'DALL-E', 'AWS S3', 'PostgreSQL', 'Next.js'],
-    githubUrl: 'https://github.com/ptxxdxxd/ai-content-platform',
-    category: 'LLM',
-    impact: 'Efficiency Gain',
-    industry: 'Marketing'
+    id: 'packable-pits',
+    title: 'Packable Pits storefront',
+    summary: 'Storefront for a flat-pack steel fire pit company I co-founded as the technical lead.',
+    details: [
+      'Static site with a CSS 3D pit configurator synced to the cart',
+      'Stripe checkout through a Supabase Edge Function for mixed carts',
+      'Supabase-backed waitlist for early access',
+    ],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Stripe', 'Supabase Edge Functions'],
+    liveUrl: 'https://packablepits.com',
   },
   {
-    id: '3',
-    title: 'Predictive Analytics for Sales Forecasting',
-    description: 'Developed a machine learning pipeline that predicts sales trends with 92% accuracy, enabling data-driven inventory and staffing decisions.',
-    problem: 'Manual forecasting led to frequent stock-outs and overstock situations, costing the company 15% in lost sales and excess inventory.',
-    solution: 'Implemented ensemble ML models incorporating historical data, market trends, and external factors for comprehensive forecasting.',
-    results: '• 92% prediction accuracy\n• 15% reduction in inventory costs\n• 20% improvement in sales\n• Real-time dashboard for stakeholders',
-    technologies: ['Python', 'TensorFlow', 'scikit-learn', 'Apache Airflow', 'Tableau', 'AWS'],
-    category: 'ML',
-    impact: 'Revenue Growth',
-    industry: 'Retail'
+    id: 'ascii-telescope',
+    title: 'ascii_telescope',
+    summary: 'Watch the Sun from your terminal: pulls the latest NASA SDO images and renders them as ASCII art.',
+    details: [
+      'Falls back across NASA SDO and NOAA image feeds if one is down',
+      'Crops to the solar disk and maps brightness to a character ramp with OpenCV and NumPy',
+    ],
+    technologies: ['Python', 'OpenCV', 'NumPy', 'Pillow'],
+    githubUrl: 'https://github.com/ptxxdxxd/ascii_telescope',
   },
   {
-    id: '4',
-    title: 'Document Intelligence & Processing',
-    description: 'Automated document processing using computer vision and NLP to extract, classify, and validate information from complex business documents.',
-    problem: 'Manual document processing was error-prone, time-consuming, and required significant human resources for basic data entry.',
-    solution: 'Built an end-to-end document processing pipeline with OCR, entity extraction, validation rules, and automated workflow routing.',
-    results: '• 95% accuracy in data extraction\n• 80% reduction in processing time\n• 70% reduction in human intervention\n• 99.9% accuracy in compliance checks',
-    technologies: ['OpenAI Vision', 'Tesseract', 'spaCy', 'Computer Vision', 'React', 'MongoDB'],
-    githubUrl: 'https://github.com/ptxxdxxd/document-ai',
-    category: 'NLP',
-    impact: 'Efficiency Gain',
-    industry: 'Financial Services'
+    id: 'stereogram',
+    title: 'Stereogram Generator',
+    summary: 'Desktop app that turns a depth map and a texture into a Magic Eye style stereogram.',
+    details: [
+      'Pixel-shifting algorithm written from scratch in NumPy',
+      'Tkinter GUI with live preview and adjustable depth and pattern width',
+    ],
+    technologies: ['Python', 'NumPy', 'Pillow', 'Tkinter'],
+    githubUrl: 'https://github.com/ptxxdxxd/stereogram-generator-gui',
   },
   {
-    id: '5',
-    title: 'AI-Powered Code Review Assistant',
-    description: 'Built an intelligent code review system that automatically detects bugs, security vulnerabilities, and suggests improvements for faster development cycles.',
-    problem: 'Code reviews were time-consuming and often missed critical issues, leading to production bugs and security vulnerabilities.',
-    solution: 'Developed an AI assistant that analyzes code quality, security patterns, and suggests improvements using static analysis and LLM reasoning.',
-    results: '• 60% faster code reviews\n• 45% reduction in production bugs\n• 80% improvement in code quality scores\n• Enhanced security posture',
-    technologies: ['GPT-4', 'Static Analysis', 'AST Parsing', 'GitHub Actions', 'Python', 'Node.js'],
-    githubUrl: 'https://github.com/ptxxdxxd/ai-code-review',
-    category: 'LLM',
-    impact: 'Efficiency Gain',
-    industry: 'Software Development'
+    id: 'impossible-colors',
+    title: 'Impossible Colors',
+    summary: 'Browser toy that uses animated gradients and opponent-process tricks to suggest colors your eyes cannot normally see.',
+    details: [
+      'Single HTML file, no dependencies',
+      'Fullscreen mode and favorites saved in localStorage',
+    ],
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    githubUrl: 'https://github.com/ptxxdxxd/impossible-colors',
   },
-  {
-    id: '6',
-    title: 'Intelligent Process Automation',
-    description: 'Designed and implemented RPA solutions using AI to automate complex business processes, reducing manual work and improving accuracy.',
-    problem: 'Multiple departments had repetitive manual processes that were time-consuming and error-prone, affecting productivity and employee satisfaction.',
-    solution: 'Created intelligent automation workflows combining RPA tools with AI decision-making, allowing complex conditional logic and error handling.',
-    results: '• 70% reduction in process completion time\n• 95% accuracy improvement\n• $150K annual labor cost savings\n• Enhanced employee satisfaction',
-    technologies: ['UiPath', 'Python', 'Machine Learning', 'OCR', 'API Integration', 'PowerBI'],
-    category: 'Automation',
-    impact: 'Cost Reduction',
-    industry: 'Operations'
-  }
-];
+]
