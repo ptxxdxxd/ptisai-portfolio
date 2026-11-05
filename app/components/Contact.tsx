@@ -3,7 +3,7 @@
 import { Mail, Linkedin, MapPin, Github } from 'lucide-react'
 
 const methods = [
-  { icon: Mail, label: 'Email', text: 'ptisdead@gmail.com', href: 'mailto:ptisdead@gmail.com' },
+  { icon: Mail, label: 'Email', text: 'ptisaidev@gmail.com', href: 'mailto:ptisaidev@gmail.com' },
   { icon: Linkedin, label: 'LinkedIn', text: 'Connect with me', href: 'https://www.linkedin.com/in/christopher-vickers-78607335b/' },
   { icon: Github, label: 'GitHub', text: '@ptxxdxxd', href: 'https://github.com/ptxxdxxd' },
 ]

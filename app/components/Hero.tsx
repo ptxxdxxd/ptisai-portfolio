@@ -60,7 +60,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
                     {/* Social Links */}
                     <div className="flex justify-center gap-4 mt-3">
                       <a
-                        href="mailto:ptisdead@gmail.com"
+                        href="mailto:ptisaidev@gmail.com"
                         className="w-8 h-8 bg-background-page border border-border-subtle rounded-lg flex items-center justify-center hover:border-primary-accent hover:text-primary-accent transition-all"
                         title="Email"
                       >
